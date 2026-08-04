@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Günün Mübarək - Lüks 3D</title>
+    
+    <!-- Zərif Google Şriftləri -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS faylı -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js ES6 Import -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.150.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.150.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- GİRİŞ EKRANI -->
+    <div id="start-screen">
+        <div class="start-btn">Sehrli Dünyaya Daxil Ol ✨</div>
+    </div>
+    
+    <!-- MUSİQİ İDARƏETMƏ DÜYMƏSİ -->
+    <div id="music-control-btn" class="music-btn" title="Musiqini Aç/Bağla">🎵</div>
+
+    <!-- MUSİQİ -->
+    <audio id="bg-music" src="music.mp3" loop></audio>
+
+    <!-- 3D Kətan -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- UI Overlay (Lüks Kart) -->
+    <div id="ui-layer">
+        <div class="glass-card" id="card">
+            <div class="glowing-rose">🌹</div>
+            <div class="card-content">
+                <h1>Ad günün mübarək!</h1>
+                <div id="typewriter-container">
+                    <p class="type-p">Bu gün sadəcə təqvimdə bir tarix deyil, dünyaya dəyər qatan bir insanın doğulduğu gündür. Arzulayıram ki, həyatın həmişə sevinc, sağlamlıq, uğur və ürəyini isidən insanlarla dolu olsun. Üzündən gülüş, qəlbindən ümid, həyatından isə xoşbəxtlik heç vaxt əskik olmasın.</p>
+                    <p class="type-p">Hər yeni yaş sənə daha gözəl xatirələr, yeni uğurlar və həyata daha çox sevinc gətirsin. Qarşına çıxan bütün çətinliklər gücünə güc qatsın, bütün arzuların isə bir-bir gerçəkləşsin.</p>
+                    <p class="type-p">Yaxşı ki, varsan. Həyatın hər günü bugünkü kimi gözəl, mənalı və unudulmaz olsun.</p>
+                </div>
+                <p class="signature">AD GÜNÜN MÜBARƏK BALACA PİŞİYİM 
+              SEVGİLERLE FETTAH 🤍
+              </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS faylı -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
